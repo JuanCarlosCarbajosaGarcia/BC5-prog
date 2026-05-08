@@ -151,8 +151,6 @@ public class Main extends Application {
     }
     public void ejercicio_6(){
         Stage ej_6 = new Stage();
-        BorderPane borderPane = new BorderPane();
-        Scene scene = new Scene(borderPane,300,300);
 
         Button button1 = new Button("Boton_1");
         Button button2 = new Button("Boton_2");
@@ -160,6 +158,8 @@ public class Main extends Application {
         Button button4 = new Button("Boton_4");
         Button button5 = new Button("Boton_5");
 
+        BorderPane borderPane = new BorderPane();
+        Scene scene = new Scene(borderPane,200,200);
 
         borderPane.setCenter(button1);
         borderPane.setTop(button2);
