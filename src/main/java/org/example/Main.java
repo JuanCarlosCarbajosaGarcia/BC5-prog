@@ -3,6 +3,7 @@ package org.example;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Button;
@@ -194,8 +195,48 @@ public class Main extends Application {
         ej_7.setScene(scene);
         ej_7.show();
     }
-    public void ejercicio_8(){}
-    public void ejercicio_9(){}
+    public void ejercicio_8(){
+        Stage ej_8 = new Stage();
+
+        Button button = new Button("Boton");
+        Label label = new Label("Etiqueta");
+        TextField textField = new TextField();
+
+        button.setOnAction(action -> label.setText(textField.getText()));
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+        gridPane.add(label,0,0);
+        gridPane.add(textField,1,0);
+        gridPane.add(button,0,1);
+        Scene scene = new Scene(gridPane,300,200);
+        ej_8.setTitle("Ejercicio 8");
+        ej_8.setScene(scene);
+        ej_8.show();
+    }
+    public void ejercicio_9(){
+        Stage ej_9 = new Stage();
+
+        Button button = new Button("Boton");
+        Label label = new Label("Etiqueta");
+        TextField textField = new TextField();
+
+        button.setOnAction(action -> label.setText(textField.getText()));
+        if (!textField.getText().isEmpty()){
+            button.setOnAction(action -> textField.setText(""));
+        }
+
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+        gridPane.add(label,0,0);
+        gridPane.add(textField,1,0);
+        gridPane.add(button,0,1);
+        Scene scene = new Scene(gridPane,300,200);
+        ej_9.setTitle("Ejercicio 9");
+        ej_9.setScene(scene);
+        ej_9.show();
+    }
     public void ejercicio_10(){}
     public void ejercicio_11(){}
     public void ejercicio_12(){}
